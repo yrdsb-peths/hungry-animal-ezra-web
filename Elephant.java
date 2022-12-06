@@ -10,6 +10,32 @@ public class Elephant extends Actor
 {
     
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    
+    GreenfootImage[] idle = new GreenfootImage[8];
+    /**
+     * constructor- runs once when elephant is created
+     */
+    
+    
+    public Elephant()
+    {
+        for(int i =0; i < idle.length; i++)
+        {
+            idle[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+        }
+        setImage(idle[0]);
+    }
+    
+    /**
+     * this animates the elephant
+     */
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
+    
     /**
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,6 +53,10 @@ public class Elephant extends Actor
         }
         
         eat();
+        
+        //to animate the elephant
+        animateElephant();
+        
     }    
     
     
