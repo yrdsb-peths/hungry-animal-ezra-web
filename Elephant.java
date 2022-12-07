@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Elephant extends Actor
 {
-    
+    //Added sound
     GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
     
     GreenfootImage[] idleRight = new GreenfootImage[8];
@@ -38,24 +38,37 @@ public class Elephant extends Actor
         }
         //Initial elephant image
         setImage(idleRight[0]);
+        
+        timer.mark();
     }
     
     /**
      * this animates the elephant
      */
+    //starts a timer
+    private SimpleTimer timer = new SimpleTimer();
+    //timer.mark();
+
     int imageIndex = 0;
     public void animateElephant()
     {
         if(facing.equals("right"))
         {
-            
-            setImage(idleRight[imageIndex]);
-            imageIndex = (imageIndex + 1) % idleRight.length;
+            if(timer.millisElapsed() > 175)
+            {
+                setImage(idleRight[imageIndex]);
+                imageIndex = (imageIndex + 1) % idleRight.length;
+                timer.mark();
+            }
         }
         else
         {
-            setImage(idleLeft[imageIndex]);
-            imageIndex = (imageIndex + 1) % idleLeft.length;
+            if(timer.millisElapsed() > 175)
+            {
+                setImage(idleLeft[imageIndex]);
+                imageIndex = (imageIndex + 1) % idleLeft.length;
+                timer.mark();
+            }
         }
     }
     
@@ -69,10 +82,12 @@ public class Elephant extends Actor
         if(Greenfoot.isKeyDown("left"))
         {
             move(-3);
+            facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
             move(3);
+            facing = "right";
         }
         
         eat();
