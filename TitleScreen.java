@@ -20,6 +20,8 @@ public class TitleScreen extends World
         super(600, 400, 1); 
         
         addObject (title, getWidth()/2, getHeight()/2);
+        
+        prepare();
     }
     
     /**
@@ -32,5 +34,11 @@ public class TitleScreen extends World
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
+    }
+    
+    public void prepare()
+    {
+        Elephant elephant = new Elephant();
+        addObject(elephant, 479,87);
     }
 }
