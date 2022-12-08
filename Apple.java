@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Apple extends Actor
 {
+    private int speed = 1;
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,7 +19,7 @@ public class Apple extends Actor
         setLocation (getX(), getY() + 1);
         
         int x = getX();
-        int y = getY() + 1;
+        int y = getY() + speed;
         setLocation(x,y);
         
         //remove the apple if missed
@@ -30,4 +31,9 @@ public class Apple extends Actor
             world.removeObject(this);
         }   
     }    
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
+    }
 }
