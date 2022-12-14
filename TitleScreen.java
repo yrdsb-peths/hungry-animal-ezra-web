@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class TitleScreen here.
- * this is the title screen
+ * this is the title screen 
+ * shows tutorial, which keys to move
+ * 
  * 
  * @author Ezra
  * @version December 6

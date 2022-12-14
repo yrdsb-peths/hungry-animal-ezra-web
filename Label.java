@@ -7,9 +7,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The Label is an actor, so you will need to create it, and then add it to the world
  * in Greenfoot.  If you keep a reference to the Label then you can change the text it
  * displays.  
+ * Shows title screen and displays words like tutorial
+ * 
+ * 
  *
- * @author Amjad Altadmri 
- * @version 1.1
+ * @author Ezra
+ * @version 1.1/ final
  */
 public class Label extends Actor
 {

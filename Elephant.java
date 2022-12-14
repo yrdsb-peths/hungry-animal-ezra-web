@@ -2,8 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Elephant here.
+ * The main character who eats apples
  * 
- * @author (your name) 
+ * @author Ezra 
  * @version (a version number or a date)
  */
 public class Elephant extends Actor
@@ -87,6 +88,18 @@ public class Elephant extends Actor
         else if(Greenfoot.isKeyDown("right"))
         {
             move(5);
+            facing = "right";
+        }
+        
+        //secret speed added
+        if(Greenfoot.isKeyDown("1"))
+        {
+            move(-100);
+            facing = "left";
+        }
+        else if(Greenfoot.isKeyDown("2"))
+        {
+            move(100);
             facing = "right";
         }
         

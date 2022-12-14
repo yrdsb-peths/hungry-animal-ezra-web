@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Elephant
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Elephant\ here.\r\n\ The\ main\ character\ who\ eats\ apples\r\n\ \r\n\ @author\ Ezra\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Elephant()
+comment1.text=\r\n\ constructor-\ runs\ once\ when\ elephant\ is\ created\r\n
+comment2.params=
+comment2.target=void\ animateElephant()
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Elephant\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment4.params=
+comment4.target=void\ eat()
+comment4.text=\r\n\ Eats\ teh\ apple\ and\ spawn\ new\ one\r\n
+numComments=5
